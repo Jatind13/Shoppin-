@@ -10,9 +10,28 @@
     padding: 20px;
     color: #555;
   }
-  
-  .swiping-right .like-indicator,
-  .swiping-left .dislike-indicator {
+
+  .swiping-right,
+  .swiping-left {
     opacity: 1;
+  }
+
+  
+  .swipe-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 50px;
+    color: white;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+  }
+  
+  .like-icon {
+    color: green;
+  }
+  
+  .dislike-icon {
+    color: red;
   }
   

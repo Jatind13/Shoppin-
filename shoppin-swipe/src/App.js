@@ -6,8 +6,10 @@ import './App.css';
 
 // Add Font Awesome
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart, faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 library.add(faShoppingCart);
+library.add(faThumbsUp)
+library.add(faThumbsDown)
 
 function App() {
   return (
