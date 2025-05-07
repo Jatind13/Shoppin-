@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">shoppin\'</string>
+    <string name="title_activity_main">shoppin\'</string>
+    <string name="package_name">com.example.shoppin</string>
+    <string name="custom_url_scheme">com.example.shoppin</string>
+</resources>
