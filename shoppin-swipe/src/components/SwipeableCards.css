@@ -1,37 +1,111 @@
+.swipeable-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.cart-counter {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: #f8f9fa;
+  border-radius: 50px;
+  padding: 5px 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-counter i {
+  color: #333;
+  font-size: 20px;
+}
+
+.cart-counter span {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
 .card-stack {
-    position: relative;
-    width: 300px;
-    height: 500px;
-    margin: 0 auto;
-  }
-  
-  .no-more-cards {
-    text-align: center;
-    padding: 20px;
-    color: #555;
-  }
+  position: relative;
+  width: 300px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .swiping-right,
-  .swiping-left {
-    opacity: 1;
-  }
+/* Card positioning for better stacking */
+.card-stack > div {
+  position: absolute;
+  width: 300px;  
+  height: 480px; 
+  will-change: transform;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Add this to create proper stacking order */
+  z-index: 0;
+}
 
-  
-  .swipe-icon {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 50px;
-    color: white;
-    z-index: 10;
-    transition: opacity 0.3s ease;
-  }
-  
-  .like-icon {
-    color: green;
-  }
-  
-  .dislike-icon {
-    color: red;
-  }
-  
+/* Apply different z-index to each card based on their order */
+.card-stack > div:nth-child(1) { z-index: 10; }
+.card-stack > div:nth-child(2) { z-index: 9; }
+.card-stack > div:nth-child(3) { z-index: 8; }
+.card-stack > div:nth-child(4) { z-index: 7; }
+.card-stack > div:nth-child(5) { z-index: 6; }
+.card-stack > div:nth-child(6) { z-index: 5; }
+.card-stack > div:nth-child(7) { z-index: 4; }
+.card-stack > div:nth-child(8) { z-index: 3; }
+.card-stack > div:nth-child(9) { z-index: 2; }
+.card-stack > div:nth-child(10) { z-index: 1; }
+
+.card-stack > div > div {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  will-change: transform;
+  border-radius: 10px;
+  box-shadow: 0 12px 25px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+}
+
+.no-more-cards {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+}
+
+.swiping-right,
+.swiping-left,
+.swiping-up {
+  opacity: 1;
+}
+
+.swipe-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 50px;
+  color: white;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+
+.like-icon {
+  color: green;
+}
+
+.dislike-icon {
+  color: red;
+}
+
+.cart-icon {
+  color: #0066ff;
+}
