@@ -1,0 +1,13 @@
+.app-header {
+    text-align: center;
+    padding: 80px 20px;
+    width: 100%;
+  }
+  
+  .app-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #e41e3f;
+  }
+  
